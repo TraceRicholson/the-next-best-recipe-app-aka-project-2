@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const port = 5001
 const knex = require('knex')(require('./knexfile.js')['development']);
 const cors = require('cors')
 const bodyParser = require('body-parser')
@@ -18,9 +18,15 @@ app.get('/recipes', (req, res) =>
         .select('*')
         .from('recipes')
         .then(data => res.status(200).json(data))
-        .catch(err => res.status(500))
+        .catch(err => res.status(500) && console.log(err))
 
 })
+
+// app.get('/recipes/:id', (req, res) => {
+
+//     res.send(recipes[req.params.id])
+
+//   })
 
 // app.post('/recipes', async (req, res) =>
 // {

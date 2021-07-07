@@ -4,14 +4,14 @@ Do you hate when you go to find a recipe and you have to read a person's entire 
 
 # Table of Contents:
 
-Description[Go to Description section](#what-exactly-is-this)<br/>
-Installation[Go to Installation section](#how-do-i-install-this)<br/>
-Usage[Go to Usage section](#how-do-i-use-this)<br/>
-Related Projects[Go to Related Projects section](#related-projects)<br/>
-Team Members[Go to Team Members section](#who-created-this-thing-anyway)<br/>
-Contributing[Go to Contributions section](#want-to-contribute)<br/>
-Roadmap[Go to Roadmap section](#what-are-our-plans-for-the-future)<br/>
-License[Go to Licensing section](#licensing)<br/>
+[Description](#what-exactly-is-this)<br/>
+[Installation](#how-do-i-install-this)<br/>
+[Usage](#how-do-i-use-this)<br/>
+[Related Projects](#related-projects)<br/>
+[Team Members](#who-created-this-thing-anyway)<br/>
+[Contributions](#want-to-contribute)<br/>
+[Roadmap](#what-are-our-plans-for-the-future)<br/>
+[Licensing](#licensing)<br/>
 
 # What exactly is this?
 

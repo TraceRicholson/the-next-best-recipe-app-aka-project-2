@@ -8,6 +8,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
+import Alert from '@material-ui/lab/Alert';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles({
   root: {
@@ -23,12 +28,17 @@ const useStyles = makeStyles({
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-evenly',
+  },
+  title: {
+    fontFamily: "'Bebas Neue', 'cursive'",
+    fontSize: "6vw"
   }
 });
 
 export default function Recipes() {
   const classes = useStyles();
   const [recipes, setRecipes] = useState([])
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     let getRecipes = async () => {
@@ -40,19 +50,33 @@ export default function Recipes() {
     getRecipes()
   }, [])
 
-  function displayRecipe(title) {
-    console.log(title)
-  }
-
   return (
-
     <>
-    <h1>Recipes!</h1>
+    <h1 className={classes.title}>Robo Recipes</h1>
+    <Collapse in={open}>
+        <Alert
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+        >
+          This recipe has been added to your favorites!
+        </Alert>
+      </Collapse>
     <div className={classes.row}>
       {recipes && recipes.map(r => {
         return (
           <Card id={r.id} className={classes.root}>
-          <CardActionArea onClick={() => displayRecipe(r.title)}>
+          <Link to={`/recipes/${r.id}`}>
+            <CardActionArea>
             <CardMedia
               className={classes.media}
               image={r.image_url}
@@ -63,9 +87,18 @@ export default function Recipes() {
               {r.title}
             </Typography>
             </CardContent>
-          </CardActionArea>
+            </CardActionArea>
+          </Link>
             <CardActions>
-              <Button linksize="small" color="primary">
+              <Button linksize="small" color="primary"
+                onClick={()=>{
+                  fetch('http://localhost:5001/favorites', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json; charset=utf-8'},
+                    body: JSON.stringify({id: r.id, title: r.title, meal_type: r.meal_type, serving_size: r.serving_size, difficulty_level: r.difficulty_level, cooking_time_in_minutes: r.cooking_time_in_minutes, ingredients: r.ingredients, instructions: r.instructions, image_url: r.image_url})
+                    })
+                    .then(setOpen(true))
+                  }}>
                 Add to Favorites
                </Button>
             </CardActions>

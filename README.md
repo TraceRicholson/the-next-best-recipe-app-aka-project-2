@@ -24,7 +24,7 @@ Kidding.
 3:  <br/>
 4:  <br/>
 
-OR, if you want to be lazy, visit the fully functioning site hosted at this AWS link:
+OR, if you want to be lazy, visit the fully functioning site hosted at this AWS link: https://master.demvkqr4ucga1.amplifyapp.com/
 
 
 # How do I use this?

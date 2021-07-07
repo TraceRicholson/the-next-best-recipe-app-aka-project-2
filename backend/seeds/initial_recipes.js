@@ -1,4 +1,3 @@
-
 exports.seed = function(knex) {
   // Deletes ALL existing entries
   return knex('recipes').del()
@@ -6,7 +5,7 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('recipes').insert([
         {id: 1, title: 'PB&J Overnight Oats', meal_type: 'Breakfast', serving_size: 2, difficulty_level: 'Beginner', cooking_time_in_minutes: 15,
-        ingredients: '⅔ cup rolled oats(65 g)\n⅔ cup milk(160 mL)\nof your choice \n½ cup vanilla greek yogurt(120 g)\n1 tablespoon strawberry jam\n3 tablespoons nut butter\n½ teaspoon vanilla extract\n1 teaspoon chia seed, optional\nstrawberry, quartered, to serve',
+        ingredients: '⅔ cup rolled oats(65 g)\n⅔ cup milk(160 mL) of your choice\n½ cup vanilla greek yogurt(120 g)\n1 tablespoon strawberry jam\n3 tablespoons nut butter\n½ teaspoon vanilla extract\n1 teaspoon chia seed, optional\nstrawberry, quartered, to serve',
         instructions: 'In a mason jar or sealable container, add the oats, milk, yogurt, jam, nut butter, vanilla extract, chia seeds, and strawberries, and stir together.\nSeal and place in the refrigerator overnight for up to five days.\nTop with additional strawberries,if desired. Enjoy!',
         image_url: 'https://minimalistbaker.com/wp-content/uploads/2015/07/Peanut-Butter-Overnight-Oats-SQUARE.jpg'},
         {id: 2, title: 'Curry Noodle Soup', meal_type: 'Lunch', serving_size: 6, difficulty_level: 'Intermediate', cooking_time_in_minutes: 30,

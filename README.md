@@ -1,17 +1,17 @@
 # Recipe Bot
 
-Do you hate when you go to find a recipe and you have to read a person's entire life story before they'll give you the actual recipe?  Then Recipe Bot is the solution for all your recipe needs.  Read on to find out more! 
+Do you hate when you go to find a recipe and you have to read a person's entire life story before they'll give you the actual recipe?  Then Recipe Bot is the solution for all your recipe needs.  Read on to find out more!
 
 # Table of Contents:
 
-Description
-Installation<br/>
-Usage<br/>
-Related Projects<br/>
-Team Members<br/>
-Contributing<br/>
-Roadmap<br/>
-License<br/>
+Description[Go to Description section](#what-exactly-is-this)<br/>
+Installation[Go to Installation section](#how-do-i-install-this)<br/>
+Usage[Go to Usage section](#how-do-i-use-this)<br/>
+Related Projects[Go to Related Projects section](#related-projects)<br/>
+Team Members[Go to Team Members section](#who-created-this-thing-anyway)<br/>
+Contributing[Go to Contributions section](#want-to-contribute)<br/>
+Roadmap[Go to Roadmap section](#what-are-our-plans-for-the-future)<br/>
+License[Go to Licensing section](#licensing)<br/>
 
 # What exactly is this?
 
@@ -43,7 +43,8 @@ Absolutely nothing.
 
 That's a fantastic question.  One we definitely have an answer to.  First we'll need you to sign a Non-Disclosure Agreement (NDA), though.  Just in case the "Ricky" incident happens again.  Poor Ricky...
 
-Now that you've signed that, below is a list of our team members and GitHub usernames in case you want to see other random projects:
+Now that you've signed that, below is a list of our team members and GitHub usernames in case you want to see other random projects:<br/>
+
 Noah Loy (noahloy)<br/>
 Aileen Ocampo (aileenocampo)<br/>
 Trace Richolson (TraceRicholson)<br/>

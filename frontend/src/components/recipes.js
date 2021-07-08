@@ -16,10 +16,10 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "22%",
-    width: "22%",
+    maxWidth: "24vw",
+    width: "24vw",
     flexGrow: '4',
-    margin: 25
+    margin: "0.6vw"
   },
   page: {
     display: "flex",
@@ -32,7 +32,10 @@ const useStyles = makeStyles({
     color: "black"
   },
   media: {
-    height: 140,
+    height: "400px",
+  },
+  content: {
+    paddingBottom: "0px",
   },
   row: {
     display: 'flex',
@@ -44,6 +47,27 @@ const useStyles = makeStyles({
     fontSize: "6vw",
     marginTop: "3%",
     marginBottom: "0%",
+    color: "#373940"
+  },
+  button: {
+    marginTop: "10px",
+    color: "white",
+    backgroundColor: '#373940',
+    '&:hover': {
+      backgroundColor: '#636360',
+      boxShadow: 'none',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: '#BDBFBF',
+    },
+  },
+  recipeTitle: {
+    fontWeight: "bold",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
 
@@ -56,7 +80,6 @@ export default function Recipes() {
     let getRecipes = async () => {
       let response = await fetch('http://localhost:5001/recipes')
       let data = await response.json()
-      console.log('test', data)
       setRecipes(data)
     }
     getRecipes()
@@ -64,7 +87,7 @@ export default function Recipes() {
 
   return (
     <div className={classes.page}>
-    <h1 className={classes.title}>Robo Recipes</h1>
+    <h1 className={classes.title}>Robot Recipes</h1>
     <Collapse in={open}>
         <Alert
           action={
@@ -86,7 +109,7 @@ export default function Recipes() {
     <div className={classes.row}>
       {recipes && recipes.map(r => {
         return (
-          <Card id={r.id} className={classes.root}>
+          <Card key={r.id} className={classes.root}>
           <Link to={`/recipes/${r.id}`} className={classes.link}>
             <CardActionArea>
             <CardMedia
@@ -94,15 +117,15 @@ export default function Recipes() {
               image={r.image_url}
               title={r.title}
             />
-            <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <CardContent className={classes.content}>
+            <Typography gutterBottom variant="h5" component="h2" className={classes.recipeTitle}>
               {r.title}
             </Typography>
             </CardContent>
             </CardActionArea>
           </Link>
-            <CardActions>
-              <Button linksize="small" color="primary"
+            <CardActions className={classes.page}>
+              <Button linksize="small" color="primary" className={classes.button}
                 onClick={()=>{
                   fetch('http://localhost:5001/favorites', {
                     method: 'POST',

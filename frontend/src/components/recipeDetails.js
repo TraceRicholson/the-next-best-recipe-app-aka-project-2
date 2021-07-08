@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     fontSize: "6vw",
     marginTop: "3%",
     marginBottom: "0%",
+    color: "#373940"
   },
   desc: {
     marginTop: '0%',
@@ -60,8 +61,19 @@ const useStyles = makeStyles({
     whiteSpace: "pre-wrap",
     wordWrap: "break-word",
   },
+  button: {
+    marginTop: "10px",
+    backgroundColor: '#373940',
+    '&:hover': {
+      backgroundColor: '#636360',
+      boxShadow: 'none',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: '#BDBFBF',
+    },
+  },
 });
-
 
 function RecipeDetails ({ match }) {
   const [recipe, setRecipe] = useState([])
@@ -81,7 +93,7 @@ function RecipeDetails ({ match }) {
     <div className={classes.page}>
       <h1 className={classes.title}>{recipe.title}</h1>
       <Typography className={classes.desc}>{recipe.meal_type} • {recipe.difficulty_level} • {recipe.cooking_time_in_minutes} minutes</Typography>
-<img className={classes.image} src={recipe.image_url} alt="food"/>
+      <img className={classes.image} src={recipe.image_url} alt="food"/>
       <Collapse in={open}>
         <Alert
           action={

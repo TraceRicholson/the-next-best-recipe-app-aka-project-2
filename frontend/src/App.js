@@ -3,7 +3,7 @@ import Home from './components/home'
 import Recipes from './components/recipes'
 import Favorites from './components/favorites'
 import RecipeDetails from './components/recipeDetails'
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 import React from 'react';
 
 function App() {

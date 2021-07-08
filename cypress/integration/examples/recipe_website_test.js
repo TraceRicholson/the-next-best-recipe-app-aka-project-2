@@ -28,12 +28,25 @@ describe('Recipe Website Tests', () => {
 
   })
 
+  it('Should be able to add a recipe to favorites from the recipe detail page', () => {
+    cy.visit('http://localhost:3000/recipes')
+    .contains('PB&J Overnight Oats')
+    .click()
+    .window()
+    .contains('Add to Favorites')
+    .click()
+    .visit('http://localhost:3000/favorites')
+    .get('[id = 1]')
+    .should('have.id', 1)
+
+  })
+
   it('Visits the Favorites Page', () => {
     cy.visit('http://localhost:3000/favorites')
 
   })
 
-  it('Should be able to add a recipe to favorites', () => {
+  it('Should be able to add a recipe to favorites from the recipes page', () => {
     cy.visit('http://localhost:3000/recipes')
     .get('[id = 2]')
     .contains('Add to Favorites')

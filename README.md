@@ -1,5 +1,5 @@
-# Robo Recipes
-Do you hate when you go to find a recipe and you have to read a person's entire life story before they'll give you the actual recipe?  Then Robo Recipes is the solution for all your recipe needs.  Read on to find out more!
+# Robot Kitchen
+Do you hate when you go to find a recipe and you have to read a person's entire life story before they'll give you the actual recipe?  Then Robot Kitchen is the solution for all your recipe needs.  Read on to find out more!
 
 # Table of Contents:
 [Description](#what-exactly-is-this)<br/>
@@ -12,7 +12,7 @@ Do you hate when you go to find a recipe and you have to read a person's entire 
 [Licensing](#licensing)<br/>
 
 # What exactly is this?
-We're so glad you asked.  Robo Recipes is a website containing a select, currated list of recipes for your tasting enjoyment.  It's a simple way to get the recipe you want without having to read 20 paragraphs about a person.  This really is the ultimate recipe website you've been searching for your whole life.
+We're so glad you asked.  Robot Kitchen is a website containing a select, currated list of recipes for your tasting enjoyment.  It's a simple way to get the recipe you want without having to read 20 paragraphs about a person.  This really is the ultimate recipe website you've been searching for your whole life.
 
 # How do I install this?
 Easy!  See steps 1 - 53 below.

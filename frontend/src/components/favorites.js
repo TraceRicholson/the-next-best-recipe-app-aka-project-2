@@ -75,6 +75,7 @@ export default function Favorites () {
     let getFavorites = async () => {
       let response = await fetch('http://localhost:5001/favorites')
       let data = await response.json()
+      console.log('favorites', data)
       setFavorites(data)
     }
     getFavorites()

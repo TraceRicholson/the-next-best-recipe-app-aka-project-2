@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   title: {
     fontFamily: "'Bebas Neue', 'cursive'",
@@ -16,8 +16,8 @@ const useStyles = makeStyles({
     marginTop: "3%",
     marginBottom: "0%",
   },
-  image: {
-    width: "40%"
+  images: {
+    width: "20vw"
   }
 });
 
@@ -26,7 +26,7 @@ export default function Home () {
   return (
     <div className={classes.row}>
     <h1 className={classes.title}>Robot Kitchen</h1>
-    <Link to="/recipes"><img className={classes.image} src='./pizza.png' alt='A cartoon robot waiter'></img></Link>
+    <Link to="/recipes"><img className={classes.images} src='./pizza.png' alt='A cartoon robot waiter'></img></Link>
     </div>
   )
 }

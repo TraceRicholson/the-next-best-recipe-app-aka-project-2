@@ -7,6 +7,9 @@ import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
+  bar: {
+    backgroundColor: '#BFCE9F'
+  },
   link: {
     textDecoration: 'none',
     color: 'white',
@@ -18,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 function Navbar() {
   const classes = useStyles();
   return (
-    <AppBar position="static">
+    <AppBar className={classes.bar} position="static">
       <Toolbar>
         <Link to="/" className={classes.link}>
           <Button color="inherit">Home</Button>

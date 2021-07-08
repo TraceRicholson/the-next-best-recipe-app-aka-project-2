@@ -21,6 +21,16 @@ const useStyles = makeStyles({
     flexGrow: '4',
     margin: 25
   },
+  page: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  link:{
+    textDecoration: 'none',
+    color: "black"
+  },
   media: {
     height: 140,
   },
@@ -31,7 +41,9 @@ const useStyles = makeStyles({
   },
   title: {
     fontFamily: "'Bebas Neue', 'cursive'",
-    fontSize: "6vw"
+    fontSize: "6vw",
+    marginTop: "3%",
+    marginBottom: "0%",
   }
 });
 
@@ -51,12 +63,12 @@ export default function Recipes() {
   }, [])
 
   return (
-    <>
+    <div className={classes.page}>
     <h1 className={classes.title}>Robo Recipes</h1>
     <Collapse in={open}>
         <Alert
           action={
-            <IconButton
+            <IconButton id="iconButton"
               aria-label="close"
               color="inherit"
               size="small"
@@ -75,7 +87,7 @@ export default function Recipes() {
       {recipes && recipes.map(r => {
         return (
           <Card id={r.id} className={classes.root}>
-          <Link to={`/recipes/${r.id}`}>
+          <Link to={`/recipes/${r.id}`} className={classes.link}>
             <CardActionArea>
             <CardMedia
               className={classes.media}
@@ -105,6 +117,6 @@ export default function Recipes() {
           </Card>)
     })}
     </div>
-    </>
+    </div>
   )
 }

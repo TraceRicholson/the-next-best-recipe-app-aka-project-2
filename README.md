@@ -30,7 +30,7 @@ The database for this project was constructed using PostgreSQL.  These instructi
 7:  From within frontend, run npm start.<br/>
 8:  That's it.  You shoul now be able to visit localhost:3000 and play around with the site!<br/>
 
-OR, if you want to be lazy, visit the fully functioning site hosted at this AWS link: https://master.d2szkaby7yyies.amplifyapp.com/<br/>
+OR, if you want to be lazy, visit the semi-functioning site hosted at this AWS link: https://master.d2szkaby7yyies.amplifyapp.com/<br/>
 
 
 

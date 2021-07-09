@@ -24,8 +24,8 @@ Kidding.
 3:  Repeat step 2, but run the command in "frontend" instead.<br/>
 4:  (DATABASE FILE UPLOAD PENDING)
 
-OR, if you want to be lazy, visit the not-yet fully functioning site hosted at this AWS link: https://master.d2szkaby7yyies.amplifyapp.com/<br/>
-*Note: this site is not connected to a database.
+OR, if you want to be lazy, visit the fully functioning site hosted at this AWS link: https://master.d2szkaby7yyies.amplifyapp.com/<br/>
+
 
 
 # How do I use this?

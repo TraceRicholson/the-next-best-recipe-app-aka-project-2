@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/TraceRicholson/the-next-best-recipe-app-aka-project-2/issues"
   },
-  "homepage": "https://github.com/TraceRicholson/the-next-best-recipe-app-aka-project-2#readme"
+  "homepage": "https://github.com/TraceRicholson/the-next-best-recipe-app-aka-project-2#readme",
+  "devDependencies": {
+    "@testing-library/cypress": "^7.0.6",
+    "cypress": "^7.7.0"
+  }
 }

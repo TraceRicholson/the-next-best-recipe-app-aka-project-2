@@ -19,10 +19,16 @@ Easy!  See steps 1 - 53 below.
 
 Kidding.
 
+The database for this project was constructed using PostgreSQL.  These instructions assume you already have PostgreSQL installed.
+
 1: Fork and clone this to your desktop.<br/>
 2: Open the project file, and cd into "backend" and run npm-instll from the command line.<br/>
 3:  Repeat step 2, but run the command in "frontend" instead.<br/>
-4:  (DATABASE FILE UPLOAD PENDING)
+4:  Alter "knexfile.js" development section to connect to your specific database instance using your unique username and password.<br/>
+5:  Start up your PostgreSQl database.  From within the "backend" folder run: "knex migrate:latest" and "knex seed:run" respectively to create the tables and populate them.<br/>
+6:  From witin backend, run npx nodemon.<br/>
+7:  From within frontend, run npm start.<br/>
+8:  That's it.  You shoul now be able to visit localhost:3000 and play around with the site!<br/>
 
 OR, if you want to be lazy, visit the fully functioning site hosted at this AWS link: https://master.d2szkaby7yyies.amplifyapp.com/<br/>
 
